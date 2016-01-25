@@ -13,6 +13,7 @@ body {
   margin: 0;
   border: 0;
   font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+  font-size: 16px;
 }
 
 main {
@@ -58,11 +59,20 @@ main {
 
 .main-image {
   text-align: center;
-  margin: 0 0 -4px;
+  margin: 0 0 24px;
 
   > img {
     max-width: 300px;
     width: 100%;
+  }
+  &:after {
+    content: '';
+    max-width: 400px;
+    border-bottom: 1px solid oColorsGetPaletteColor('pink-tint4');
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -3px;
   }
 }
 
@@ -125,9 +135,9 @@ main {
 // Person of  the Year: */
 .headline {
   font-family: oFontsGetFontFamilyWithFallbacks(FinancierDisplayWeb);
-  font-size: 2.5em;
+  font-size: 2em;
   color: #333333;
-  line-height: 54px;
+  line-height: 36px;
   text-align: center;
   position: relative;
   font-weight: normal;
@@ -142,15 +152,17 @@ main {
   margin-bottom: 2.2em;
   font-family: oFontsGetFontFamilyWithFallbacks(FinancierDisplayWeb);
   font-size: 16px;
+  font-style: italic;
   color: #505050;
   line-height: 22px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.intro a {
+a {
   text-decoration: none;
   color: #2e6e9e;
+  // white-space: nowrap;
 }
 // 2015: THE WINNER: */
 .winner_section_title {
@@ -167,16 +179,56 @@ main {
 // Line: */
 //border: 2px solid #979797;
 
-
-
-
-// Angela Merkel: */
-.name {
+.card__body h3 {
   font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 1em;
+  margin: 20px 0 -6px;
+  color: oColorsGetPaletteColor('grey-tint5');
+}
+
+.card__body ul {
+  list-style-position: outside;
+  margin-left: 0;
+  padding-left: 20px;
+  margin-top: -8px;
+  > li {
+    color: oColorsGetPaletteColor('grey-tint4');
+    margin-bottom: 10px;
+    font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.quote {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 22px;
+  margin-left: 90px;
+  color: oColorsGetPaletteColor('grey-tint4');
+  letter-spacing: 0.02em;
+  &:before {
+    background: url('http://ig.ft.com/sites/nico-colchester-fellowship/images/quote-sm.svg');
+    content: ' ';
+    background-size: 30px 20px;
+    width: 30px;
+    height: 20px;
+    margin-left: -26px;
+    margin-top: -14px;
+    margin-bottom: 4px;
+    display: block;
+  }
+}
+// Angela Merkel: */
+.card__title.name {
+  font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+  font-size: 18px;
   color: #333333;
   line-height: 26px;
-  margin: 0;
+  margin: -6px 0 0;
   font-weight: 500;
 }
 
@@ -201,7 +253,7 @@ main {
   -moz-osx-font-smoothing: grayscale;
 }
 // Blurb: */
-.standfirst {
+p {
   font-family: oFontsGetFontFamilyWithFallbacks(FinancierDisplayWeb);
   font-size: 16px;
   color: #505050;
@@ -209,6 +261,7 @@ main {
   margin-top: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 
@@ -441,8 +494,9 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
 
  @include oGridRespondTo(M) {
   .headline {
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 0.3em 0;
+    line-height: 44px;
   }
   .intro {
       font-size: 1.3em;
@@ -456,19 +510,43 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
     width: 85px;
     height: 85px;
   }
-
+  .quote {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 150px;
+    color: oColorsGetPaletteColor('grey-tint4');
+    &:before {
+      background: url('http://ig.ft.com/sites/nico-colchester-fellowship/images/quote.svg');
+      content: ' ';
+      background-size: 42px 28px;
+      width: 42px;
+      height: 28px;
+      margin-left: -36px;
+      margin-top: -14px;
+      display: block;
+    }
+  }
   .job {
     font-size: 18px;
     line-height: 22px;
   }
-  .name {
+  .card__title.name {
     font-size: 22px;
     line-height: 22px;
+    margin: -3px 0 0;
   }
 
-  .standfirst {
+  p {
     font-size: 21px;
     line-height: 28px;
+  }
+  .card__body h3 {
+    font-size: 1.25em;
+  }
+  .card__body ul > li {
+    font-size: 1.25em;
+    font-weight: 200;
   }
 
   .winner .name {
@@ -491,7 +569,7 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
 
  @include oGridRespondTo(L) {
   .headline {
-    font-size: 4em;
+    font-size: 3.5em;
     margin: 0.5em 0;
   }
   .intro {
@@ -500,6 +578,13 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
   }
   .img-holder,
   .winner .card__body {
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  .quote {
+    font-size: 20px;
+    line-height: 26px;
   }
   .card {
     padding-right: 100px;
