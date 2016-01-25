@@ -209,6 +209,7 @@ a {
   line-height: 22px;
   margin-left: 90px;
   color: oColorsGetPaletteColor('grey-tint4');
+  letter-spacing: 0.02em;
   &:before {
     background: url('http://ig.ft.com/sites/nico-colchester-fellowship/images/quote-sm.svg');
     content: ' ';
