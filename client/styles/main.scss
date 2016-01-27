@@ -209,7 +209,7 @@ a {
   color: oColorsGetPaletteColor('grey-tint4');
   letter-spacing: 0.02em;
   &:before {
-    background: url('http://ig.ft.com/sites/nico-colchester-fellowship/images/quote-sm.svg');
+    background: url('../images/quote-sm.svg');
     content: ' ';
     background-size: 30px 20px;
     width: 30px;
@@ -478,7 +478,7 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
     margin-left: 150px;
     color: oColorsGetPaletteColor('grey-tint4');
     &:before {
-      background: url('http://ig.ft.com/sites/nico-colchester-fellowship/images/quote.svg');
+      background: url('../images/quote.svg');
       content: ' ';
       background-size: 42px 28px;
       width: 42px;
