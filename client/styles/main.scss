@@ -4,13 +4,19 @@ $o-grid-is-silent:  false;
 @import 'o-footer/main';
 @import 'o-grid/main';
 
+$sans: MetricWeb, sans-serif;
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 body {
   @include oColorsFor(page, background);
 
   margin: 0;
   border: 0;
-  font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+  font-family: $sans;
   font-size: 16px;
 }
 
@@ -140,8 +146,6 @@ main {
   position: relative;
   font-weight: normal;
   margin: 6px 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .intro {
@@ -153,8 +157,6 @@ main {
   font-style: italic;
   color: #505050;
   line-height: 22px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -164,7 +166,7 @@ a {
 }
 // 2015: THE WINNER: */
 .winner_section_title {
-  font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+  font-family: $sans;
   font-size: 14px;
   color: #333333;
   letter-spacing: 0.1em;
@@ -178,7 +180,7 @@ a {
 //border: 2px solid #979797;
 
 .card__body h3 {
-  font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+  font-family: $sans;
   font-weight: 600;
   font-size: 1em;
   margin: 20px 0 -6px;
@@ -193,11 +195,9 @@ a {
   > li {
     color: oColorsGetPaletteColor('grey-tint4');
     margin-bottom: 10px;
-    font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+    font-family: $sans;
     font-size: 14px;
     font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 }
 
@@ -222,7 +222,7 @@ a {
 }
 // Angela Merkel: */
 .card__title.name {
-  font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+  font-family: $sans;
   font-size: 18px;
   color: #333333;
   line-height: 26px;
@@ -242,13 +242,11 @@ a {
 }
 
 .job {
-  font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+  font-family: $sans;
   font-weight: 500;
   color: #a7a59b;
   font-size: 16px;
   margin: 4px 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 // Blurb: */
 p {
@@ -257,8 +255,6 @@ p {
   color: #505050;
   line-height: 22px;
   margin-top: 14px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
 }
 
@@ -267,13 +263,13 @@ p {
 // PREVIOUS WINNERS
 // SECTION TITLE: */
 .section_title {
-  font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+  font-family: $sans;
   font-size: 16px;
   color: #505050;
 }
 // PREVIOUS WINNER NAME: */
 .previous_name {
-  font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+  font-family: $sans;
   font-size: 16px;
   color: #333333;
   line-height: 16px;
@@ -281,7 +277,7 @@ p {
 
 // YEAR: */
 .year {
-  font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+  font-family: $sans;
   font-size: 14px;
   color: #9b164f;
   margin-top: -3px;
@@ -294,7 +290,7 @@ p {
 
 // Full profile: */
 .full-profile {
-  font-family: Metric-Regular;
+  font-family: $sans;
   font-size: 16px;
   color: #333333;
   line-height: 22px;
@@ -308,7 +304,7 @@ p {
   width: 116px;
   height: 28px;
   // Full profile: */
-  font-family: Metric-Regular;
+  font-family: $sans;
   font-size: 16px;
   color: #ebebeb;
   line-height: 22px;
@@ -365,8 +361,6 @@ p {
     height: 28px;
     line-height: 26px;
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 
     &:after {
       content: " ";
