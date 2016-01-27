@@ -4,8 +4,6 @@ $o-grid-is-silent:  false;
 @import 'o-footer/main';
 @import 'o-grid/main';
 
-@import 'fonts';
-
 
 body {
   @include oColorsFor(page, background);

@@ -42,18 +42,6 @@ Handlebars.createGlobalHelper = function (name, hash, commands) {
   });
 };
 
-// Handlebars.createOptionsHelper = function(options, commands) {
-//   var isAbsURL = /^https?:\/\//;
-//   var o = {
-//     'image.baseURL': function(baseURL, filename) {
-//       baseURL = baseURL || 'images/content';
-//       return isAbsURL.test(filename) ? filename : (baseURL + '/' + filename).replace(/[^:]\/{2,}/, '/');
-//     }
-//   };
-//   Handlebars.Utils.extend(o, commands);
-//   Handlebars.createGlobalHelper('options', options, o);
-// };
-
 Handlebars.createOptionsHelpers = function (options) {
   Handlebars.registerHelper('option', function (optName) {
     return options[optName];
