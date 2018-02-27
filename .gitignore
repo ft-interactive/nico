@@ -1,5 +1,10 @@
-node_modules
-bower_components
-dist
-.tmp
-npm-debug.log
+/node_modules/
+/bower_components/
+/dist/
+/.tmp/
+/.sass-cache/
+/yarn.lock
+*.log
+npm-debug.log*
+.env
+.DS_Store
